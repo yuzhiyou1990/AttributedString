@@ -22,7 +22,8 @@ let package = Package(
         .target(
             name: "AttributedString",
             dependencies: [],
-            path: "Sources"
+            path: "Sources",
+            exclude: ["Info.plist"]
         )
     ]
 )
