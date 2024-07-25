@@ -123,10 +123,16 @@ extension ASAttributedStringWrapper where Base: UILabel {
     public func remove(checking: Checking) {
         base.observers.removeValue(forKey: checking)
     }
+    
     /// 移除监听
     /// - Parameter checkings: 检查类型
     public func remove(checkings: [Checking]) {
         checkings.forEach { base.observers.removeValue(forKey: $0) }
+    }
+    
+    /// 移除监听
+    public func removeAll() {
+        base.observers.removeAll()
     }
 }
 
